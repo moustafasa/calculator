@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  background-color: #207b97;
+  color: white;
+  padding: 20px;
+  margin-top: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.calc {
+  background-color: #ddd;
+  width: 400px;
+  padding: 10px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  border-radius: 5px;
+}
+.calc .result {
+  background-color: #888383;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.356) inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  overflow: hidden;
+}
+.calc .buttons {
+  display: flex;
+}
+.calc .buttons button {
+  border: none;
+  padding: 15px;
+  display: block;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.calc .buttons button:hover {
+  background-color: #62b2f3;
+  color: white;
+}
+.calc .buttons .operators {
+  margin-left: 20px;
+}
+.calc .buttons .operators button {
+  width: 100%;
+  padding: 10px 20px;
+}
+.calc .buttons .operators button:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+.calc .buttons .numbers {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+}
+.calc .buttons .numbers .col-1 {
+  width: calc((97% / 3) * 1);
+}
+.calc .buttons .numbers .col-2 {
+  width: calc((97% / 3) * 2);
+}
+.calc .buttons .numbers .col-3 {
+  width: calc((100% / 3) * 3);
+}
+
+/*# sourceMappingURL=main.css.map */

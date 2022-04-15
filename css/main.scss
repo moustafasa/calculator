@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+}
+h1 {
+  background-color: rgb(32, 123, 151);
+  color: white;
+  padding: 20px;
+  margin-top: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+.calc {
+  background-color: #ddd;
+  width: 400px;
+  padding: 10px;
+  height: fit-content;
+  margin: auto;
+  border-radius: 5px;
+  .result {
+    background-color: rgb(136, 131, 131);
+    width: 100%;
+    height: 50px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.356) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    overflow: hidden;
+  }
+  .buttons {
+    display: flex;
+    button {
+      border: none;
+      padding: 15px;
+      display: block;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        background-color: rgb(98, 178, 243);
+        color: white;
+      }
+    }
+    .operators {
+      margin-left: 20px;
+      button {
+        width: 100%;
+        padding: 10px 20px;
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .numbers {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-between;
+      @for $var from 1 through 3 {
+        .col-#{$var} {
+          @if ($var ==3) {
+            width: calc((100% / 3) * #{$var});
+          } @else {
+            width: calc((97% / 3) * #{$var});
+          }
+        }
+      }
+    }
+  }
+}
